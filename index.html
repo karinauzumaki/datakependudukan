@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Administrasi Kependudukan Berbasis Web - Kantor Desa Mengkalang</title>
+<link rel="stylesheet" href="desa.css">
+</head>
+<body data-role="penduduk">
+
+<section id="login">
+  <div class="hero">
+    <div class="seal">🏛️</div>
+    <h1>ADMINISTRASI KEPENDUDUKAN BERBASIS WEB PADA KANTOR DESA MENGKALANG</h1>
+    <p>Pengajuan surat, verifikasi berjenjang, dan tanda tangan desa dalam satu sistem yang tercatat.</p>
+    <ol class="alur">
+      <li><b>Penduduk</b>mengajukan surat dan mengunggah KTP/KK</li>
+      <li><b>Ketua RT/RW</b>memverifikasi pengantar</li>
+      <li><b>Admin Desa</b>memeriksa berkas dan memproses</li>
+      <li><b>Kepala Desa</b>menandatangani surat</li>
+    </ol>
+  </div>
+  <form class="box" id="fLogin" autocomplete="off">
+    <h2>Masuk ke sistem</h2>
+    <div id="tabs">
+      <button type="button" data-r="penduduk" class="on">Penduduk</button>
+      <button type="button" data-r="admin">Admin</button>
+      <button type="button" data-r="kades">Kepala Desa</button>
+      <button type="button" data-r="rt">RT/RW</button>
+    </div>
+    <label>Pengguna<input id="lu" required></label>
+    <label>Kata sandi<input id="lp" type="password" required></label>
+    <button class="b pri full">Masuk</button>
+    <p class="hint" id="hint"></p>
+    <p id="reg" class="reg">Belum punya akun? <a href="#" data-act="reg">Daftar sebagai penduduk</a></p>
+  </form>
+</section>
+
+<div id="app" hidden>
+  <aside id="side"></aside>
+  <div class="main">
+    <header>
+      <h1 id="ttl"></h1>
+      <div class="who"><span id="who"></span><button class="b sm" data-act="out">Keluar</button></div>
+    </header>
+    <main id="page"></main>
+    <footer>Kantor Desa Mengkalang &middot; Administrasi Kependudukan Berbasis Web</footer>
+  </div>
+</div>
+
+<div id="modal" hidden><div class="mb"><button class="x" data-act="tutup" aria-label="Tutup">✕</button><div id="mc"></div></div></div>
+<div id="toast"></div>
+<script src="ahayyy.js"></script>
+</body>
+</html>
